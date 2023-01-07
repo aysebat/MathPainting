@@ -1,7 +1,5 @@
 import numpy as np
 from PIL import Image
-
-
 class Canvas:
     """Description: Object where all shapes are going to drawn"""
 
