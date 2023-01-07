@@ -1,3 +1,4 @@
+from PIL import Image
 class Canvas:
     """Description: Object where all shapes are going to drawn"""
 
@@ -6,8 +7,12 @@ class Canvas:
         self.height = height
         self.color = color
 
+        #Creates a 3d numpy array of zeros
+        self.data
+
     def make(self, imagepath):
-        pass
+        image = Image.fromaaray(self.data, 'RGB')
+        image.save(imagepath)
 
 
 class Square:
