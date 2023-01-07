@@ -1,6 +1,6 @@
 from canvas import Canvas
 from shapes import Square, Rectangle
-
+from share import FileSharer
 # Make a dictioney for the color
 colors = {
     "red": (255, 0, 0),
@@ -64,3 +64,5 @@ while True:
 
 
 canvas.make("canvas.png")
+fileshare = FileSharer(filepath="canvas.png")
+print(fileshare.share())
