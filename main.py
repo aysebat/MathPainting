@@ -8,7 +8,9 @@ class Canvas:
         self.color = color
 
         #Creates a 3d numpy array of zeros
-        self.data
+        self.data = np.zeros((self.width, self.height, 3), dtype=np.uint8)
+        #change [0,0,0] with user given color
+        self.data[:] = self.color
 
     def make(self, imagepath):
         image = Image.fromaaray(self.data, 'RGB')
