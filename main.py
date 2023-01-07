@@ -1,4 +1,6 @@
 from PIL import Image
+
+
 class Canvas:
     """Description: Object where all shapes are going to drawn"""
 
@@ -7,9 +9,9 @@ class Canvas:
         self.height = height
         self.color = color
 
-        #Creates a 3d numpy array of zeros
+        # Creates a 3d numpy array of zeros
         self.data = np.zeros((self.width, self.height, 3), dtype=np.uint8)
-        #change [0,0,0] with user given color
+        # change [0,0,0] with user given color
         self.data[:] = self.color
 
     def make(self, imagepath):
@@ -28,7 +30,7 @@ class Square:
     def draw(self, canvas):
         """Draw itself into canvas
            Change a slice of the array with new value"""
-        canvas.data[self.x: self.x + self.side, self.y: self.y+ self.side] = self.color
+        canvas.data[self.x: self.x + self.side, self.y: self.y + self.side] = self.color
 
 
 class Rectangle:
@@ -41,4 +43,6 @@ class Rectangle:
         self.color = color
 
     def draw(self, canvas):
-        pass
+        """Draw itself into canvas
+        Change a slice of the array with new value"""
+        canvas.data[self.x:self.x + self.width, self.y: self.y + self.height] = self.color
