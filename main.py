@@ -26,7 +26,9 @@ class Square:
         self.color = color
 
     def draw(self, canvas):
-        pass
+        """Draw itself into canvas
+           Change a slice of the array with new value"""
+        canvas.data[self.x: self.x + self.side, self.y: self.y+ self.side] = self.color
 
 
 class Rectangle:
