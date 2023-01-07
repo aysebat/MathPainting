@@ -1,7 +1,6 @@
 import numpy as np
 from PIL import Image
 
-#Create a numpy array zeros
 data = np.zeros([5,4,3], dtype=np.uint8)
 #replace the zeros with yellow color
 data[:] = [255, 255, 0]
